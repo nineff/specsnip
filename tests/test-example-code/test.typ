@@ -54,5 +54,5 @@ The `main` function is #{ if not q [not] } listed in the source code.
 #let first_capture = result.at(0).captures.at(0)
 #raw(code.slice(first_capture.start_byte, first_capture.end_byte), block: true, lang: "h")
 
-= Get the entire Tree
-#get_tree(code)
+//= Get the entire Tree
+//#get_tree(code)

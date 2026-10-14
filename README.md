@@ -24,8 +24,3 @@ It uses [Tree-Sitter](https://tree-sitter.github.io/tree-sitter/) compiled to WA
 #codly-range(r.start, end: r.end)
 #raw(code, block: true, lang: "h")
 ```
-
-## todo
-
-- tests
-- provide wasm sourcecode on github or somewhere else
