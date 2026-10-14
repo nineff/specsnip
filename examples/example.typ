@@ -14,7 +14,7 @@
 
 #import "@local/specsnip:0.1.0": *
 
-#let code = read(path("icd.h"))
+#let code = read("icd.h")
 
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.10": *
