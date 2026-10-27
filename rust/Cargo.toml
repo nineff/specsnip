@@ -1,0 +1,21 @@
+[package]
+name = "icy-sitter"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ciborium = "0.2.2"
+serde = { version = "1.0.229", features = ["derive"] }
+tree-sitter = { version = "0.27.1" }
+tree-sitter-c = { version = "0.24.2" }
+wasm-minimal-protocol = "0.2.1"
+
+[profile.release]
+opt-level = "z"  # Optimize for size
+strip = true  # Strip symbols from binary
+lto = "fat"  # Enable link-time optimization; see https://github.com/wasmi-labs/wasmi/blob/main/docs/usage.md
+panic = "abort"  # Abort on panic
+codegen-units = 1  # Reduce number of codegen units to increase optimizations
